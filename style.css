@@ -40,23 +40,26 @@ header p {
 
 /* Postingan */
 .post {
-    background-color: white;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Gradien untuk efek timbul */
     margin: 40px 0;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.7); /* Bayangan ganda */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border halus */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .post:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px); /* Efek hover lebih dramatis */
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.15), -12px -12px 20px rgba(255, 255, 255, 0.8); /* Bayangan lebih tebal saat hover */
 }
 
 .post-thumbnail img {
     width: 100%;
     height: auto;
     display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .post-content {
@@ -99,11 +102,12 @@ header p {
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .post .read-more:hover {
     background-color: #45a049;
+    transform: translateY(-2px); /* Efek hover kecil pada tombol */
 }
 
 /* Footer */
