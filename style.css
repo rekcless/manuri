@@ -1,0 +1,174 @@
+:root{
+  --krem: #f9f6f1;
+  --hijau: #2f6f52;
+  --hijau-muda: #7bb661;
+  --teks: #263238;
+  --card-bg: #ffffff;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--krem);
+  color:var(--teks);
+  margin:0;
+  padding:0;
+  -webkit-font-smoothing:antialiased;
+}
+
+header{
+  background:var(--hijau);
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 16px;
+}
+
+header h1{margin:0;font-size:18px}
+button{
+  background:var(--hijau-muda);
+  color:white;
+  border:none;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+button.muted{background:#ddd;color:#333}
+
+main{padding:16px;max-width:900px;margin:0 auto}
+
+/* card */
+.card{
+  background:var(--card-bg);
+  border-radius:10px;
+  padding:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom:16px;
+}
+
+/* form inputs */
+#postForm input, #postForm textarea,
+.edit-modal input, .edit-modal textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:8px;
+  border-radius:8px;
+  border:1px solid #e0e0e0;
+  font-size:14px;
+}
+
+/* posts */
+.post{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:12px;
+  border-radius:10px;
+  background:var(--card-bg);
+  margin-bottom:12px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.04);
+}
+
+.post-thumb{
+  width:92px;
+  height:64px;
+  object-fit:cover;
+  border-radius:8px;
+  flex-shrink:0;
+  background:#f0f0f0;
+}
+
+.post-body{flex:1}
+
+.post h3{
+  margin:0 0 6px 0;
+  padding:8px;
+  background:#edf6ee;
+  color:var(--hijau);
+  border-radius:8px;
+  font-size:16px;
+}
+
+/* meta small */
+.meta{
+  font-size:12px;color:#777;margin-bottom:8px;
+}
+
+/* preview */
+.preview{font-size:14px;line-height:1.4;margin-bottom:8px}
+
+/* controls */
+.controls{display:flex;gap:8px;flex-wrap:wrap}
+.controls button{padding:6px 10px;border-radius:6px;font-size:13px}
+.controls .read{background:transparent;color:var(--hijau);border:1px solid var(--hijau)}
+.controls .edit{background:#ffd54d;color:#333}
+.controls .del{background:#e74c3c;color:white}
+
+/* pagination */
+.pagination{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.pageNum{
+  padding:6px 10px;border-radius:6px;background:#fff;border:1px solid #eee;cursor:pointer;
+}
+.pageNum.active{background:var(--hijau);color:#fff;border-color:var(--hijau)}
+
+/* modal overlay (scrollable) */
+.overlay{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.5);
+  z-index:999;
+  padding:16px;
+  overflow-y:auto;
+}
+
+/* hidden helper */
+.hidden{display:none}
+
+/* modal content */
+.modal-content{
+  width:100%;
+  max-width:720px;
+  max-height:90vh;
+  overflow-y:auto;
+  background:var(--card-bg);
+  border-radius:10px;
+  padding:16px;
+  box-shadow:0 6px 24px rgba(0,0,0,0.2);
+  transform: translateY(6px);
+  opacity: 0;
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+/* fade-in when visible */
+.overlay:not(.hidden) .modal-content{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* modal thumb */
+.modal-thumb{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-top:8px;
+}
+
+/* smaller read modal tweaks */
+.read-modal h2{margin-top:0}
+
+/* footer credit */
+footer{padding:14px;text-align:center}
+.credit{font-size:13px;color:#666}
+
+/* responsive tweak */
+@media (max-width:520px){
+  .post{flex-direction:column}
+  .post-thumb{width:100%;height:160px}
+  .controls{justify-content:flex-start}
+}
