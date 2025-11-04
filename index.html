@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WapBlog Firebase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📱 WapBlog Firebase</h1>
+    <button id="adminBtn">Admin</button>
+  </header>
+
+  <main>
+    <form id="formPost" style="display:none;">
+      <input type="text" id="judul" placeholder="Judul tulisan" required>
+      <textarea id="isi" placeholder="Tulis isi artikel di sini..." required></textarea>
+      <button type="submit">Kirim Tulisan</button>
+    </form>
+
+    <h2>📰 Daftar Tulisan</h2>
+    <div id="daftarTulisan"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 WapBlog Firebase</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

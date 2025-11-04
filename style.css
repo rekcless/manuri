@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f8ff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #0078d7;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+#adminBtn {
+  background: #ffffff33;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+main {
+  padding: 15px;
+}
+
+form {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: #0078d7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.post {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  background: #0078d7;
+  color: white;
+}
